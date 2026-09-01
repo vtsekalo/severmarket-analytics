@@ -57,8 +57,7 @@ Advanced analytics section:
 - conversion metrics;
 - return statistics;
 - category analysis;
-- regional performance;
-- sales forecasting foundations.
+- regional performance.
 
 Charts are built using Recharts.
 
@@ -85,15 +84,6 @@ Supported order statuses:
 - Delivered
 - Cancelled
 - Returned
-
-Order information includes:
-
-- customer;
-- city;
-- payment method;
-- delivery information;
-- products;
-- order history.
 
 ---
 
@@ -167,4 +157,219 @@ Customer analytics:
 
 The project follows Feature-Sliced Design principles.
 
-Project structure:
+```
+src/
+├── app/
+├── widgets/
+├── features/
+├── entities/
+└── shared/
+```
+
+Architecture separates:
+
+- UI layer;
+- business logic;
+- API communication;
+- domain entities;
+- reusable utilities.
+
+---
+
+# State Management
+
+## RTK Query
+
+Used for server state:
+
+- API requests;
+- caching;
+- mutations;
+- cache invalidation;
+- loading states;
+- error handling.
+
+## Redux Toolkit
+
+Used for global application state.
+
+## Zustand
+
+Used for lightweight client-side UI state.
+
+---
+
+# API
+
+The application uses internal REST API routes powered by Next.js Route Handlers.
+
+```http
+GET    /api/dashboard
+GET    /api/analytics
+
+GET    /api/orders
+GET    /api/orders/[id]
+PATCH  /api/orders/[id]
+
+GET    /api/products
+GET    /api/products/[id]
+PATCH  /api/products/[id]
+
+GET    /api/customers
+GET    /api/customers/[id]
+
+GET    /api/regions
+```
+
+The project uses deterministic mock data for development and testing.
+
+---
+
+# UI & UX
+
+Implemented:
+
+- responsive dashboard layout;
+- sidebar navigation;
+- light and dark themes;
+- KPI cards;
+- charts;
+- tables;
+- dialogs;
+- drawers;
+- tooltips;
+- notifications;
+- loading states;
+- error states;
+- empty states.
+
+Supported platforms:
+
+- desktop;
+- tablet;
+- mobile devices.
+
+---
+
+# Performance
+
+Implemented:
+
+- Next.js Server Components;
+- Client Components only where required;
+- route-based rendering;
+- optimized data fetching;
+- pagination;
+- reusable UI components;
+- controlled rendering.
+
+---
+
+# Testing
+
+Implemented tests for:
+
+- utility functions;
+- formatting logic;
+- application helpers;
+- UI behavior.
+
+Run:
+
+```bash
+npm run test
+```
+
+---
+
+# Getting Started
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run development server:
+
+```bash
+npm run dev
+```
+
+Open:
+
+```
+http://localhost:3000
+```
+
+---
+
+# Available Scripts
+
+```bash
+npm run dev
+npm run build
+npm run start
+npm run lint
+npm run format
+npm run test
+```
+
+---
+
+# Environment Variables
+
+Create `.env.local` using `.env.example` configuration.
+
+---
+
+# Responsive Design
+
+Desktop:
+
+- full sidebar navigation;
+- analytics dashboard;
+- advanced tables.
+
+Tablet:
+
+- adaptive layout;
+- collapsed navigation.
+
+Mobile:
+
+- drawer navigation;
+- optimized content layout;
+- touch-friendly interface.
+
+---
+
+# Future Improvements
+
+Potential improvements:
+
+- authentication system;
+- role-based access control;
+- real backend integration;
+- database layer;
+- advanced reporting;
+- data export;
+- notification system.
+
+---
+
+# Screenshots
+
+_Add application screenshots here._
+
+---
+
+# Live Demo
+
+_Add deployment link here._
+
+---
+
+# Engineering Focus
+
+Built with modern frontend architecture practices focused on scalability, maintainability, and production-ready development workflows.
