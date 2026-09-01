@@ -1,51 +1,170 @@
 # SeverMarket Analytics
 
-Демонстрационная SaaS analytics/admin platform для вымышленной российской e-commerce компании SeverMarket. Проект создан как portfolio/freelance-style pet-project и не представляет реального клиента.
+## SaaS Analytics & Admin Dashboard Platform
 
-## Features
+SeverMarket Analytics is a modern analytics and management platform for e-commerce operations.
 
-- Обзор с KPI, динамикой выручки, статусами заказов и регионами.
-- Аналитика по месяцам и категориям, таблицы заказов, товаров и клиентов.
-- Детальные страницы с типизированными Route Handlers, редактирование статуса заказа и товара.
-- Поиск, pagination, loading/error/empty states, responsive layout, light/dark mode.
+The application provides a centralized workspace for monitoring sales performance, managing orders, analyzing customers, tracking products, and making data-driven business decisions.
 
-## Tech Stack
+Built with modern frontend architecture principles, the platform combines scalable application structure, efficient state management, responsive UI, and production-oriented development practices.
 
-Next.js App Router, React, TypeScript strict, MUI, Redux Toolkit, RTK Query, Zustand, React Hook Form, Zod, Recharts, Vitest.
+---
 
-## Architecture
+# Overview
 
-Feature-Sliced-inspired structure: `app` отвечает за маршруты, `widgets` — за композицию UI, `features` — за интерактивные сценарии, `entities` — за модели/API, `shared` — за типы, mock data и утилиты. Server Components используются для route entry points, интерактивные таблицы/графики — Client Components.
+Modern e-commerce platforms require convenient tools for analyzing operational data:
+
+- revenue performance;
+- order processing;
+- customer activity;
+- product analytics;
+- regional sales;
+- business trends.
+
+SeverMarket Analytics provides a unified dashboard where managers and analysts can quickly access key metrics and manage operational workflows.
+
+---
+
+# Features
+
+## Dashboard
+
+Main analytics workspace with:
+
+- revenue overview;
+- order statistics;
+- customer metrics;
+- average order value;
+- sales trends;
+- category performance;
+- regional analytics.
+
+Implemented KPI cards:
+
+- Revenue
+- Orders
+- Customers
+- Average Order Value
+
+---
+
+## Analytics
+
+Advanced analytics section:
+
+- revenue dynamics;
+- order trends;
+- conversion metrics;
+- return statistics;
+- category analysis;
+- regional performance;
+- sales forecasting foundations.
+
+Charts are built using Recharts.
+
+---
+
+## Orders Management
+
+Order management interface includes:
+
+- orders table;
+- search;
+- filtering;
+- sorting;
+- pagination;
+- URL query parameters;
+- order details;
+- status management.
+
+Supported order statuses:
+
+- New
+- Processing
+- Shipped
+- Delivered
+- Cancelled
+- Returned
+
+Order information includes:
+
+- customer;
+- city;
+- payment method;
+- delivery information;
+- products;
+- order history.
+
+---
+
+## Product Management
+
+Product analytics and management:
+
+- product catalog;
+- categories;
+- pricing;
+- inventory tracking;
+- sales statistics;
+- revenue analysis;
+- product editing.
+
+Forms are implemented with:
+
+- React Hook Form;
+- Zod validation.
+
+---
+
+## Customer Management
+
+Customer analytics:
+
+- customer profiles;
+- contact information;
+- order history;
+- total spending;
+- average order value;
+- customer activity.
+
+---
+
+# Tech Stack
+
+## Frontend
+
+- Next.js 16
+- React 19
+- TypeScript
+- App Router
+- Material UI
+- Recharts
 
 ## State Management
 
-RTK Query хранит server state, кэширует запросы и инвалидирует данные после mutations. Redux Toolkit используется как store-провайдер для RTK Query. Zustand хранит только UI state темы, чтобы не смешивать его с API state.
+- Redux Toolkit
+- RTK Query
+- Zustand
 
-## Data Layer
+## Forms & Validation
 
-Mock REST API находится в `src/app/api`. Детерминированные synthetic данные (184 заказа, 64 товара, 138 клиентов, регионы и месяцы аналитики) — `src/shared/mock/data.ts`.
+- React Hook Form
+- Zod
 
-## Getting Started
+## Testing
 
-```bash
-npm install
-npm run dev
-```
+- Vitest
+- React Testing Library
 
-Откройте http://localhost:3000.
+## Code Quality
 
-## Available Scripts
+- ESLint
+- Prettier
 
-`npm run lint`, `npm run build`, `npm run test`, `npm run format`.
+---
 
-## Performance & Responsive Design
+# Architecture
 
-Pagination ограничивает объём таблиц, графики рендерят только нужные series, а адаптивная сетка переключается для tablet/mobile без горизонтального overflow. Следующий шаг — dynamic import тяжёлых chart widgets и серверная пагинация в настоящем API.
+The project follows Feature-Sliced Design principles.
 
-## Screenshots
-
-Добавьте скриншоты dashboard и mobile layout после запуска.
-
-## Future Improvements
-
-Авторизация и RBAC, PostgreSQL backend, экспорт CSV/PDF, интерактивная карта России, e2e-тесты и полноценный audit log.
+Project structure:
