@@ -1,5 +1,13 @@
 # SeverMarket Analytics
 
+## Production-style SaaS Analytics Dashboard for E-commerce
+
+A modern analytics and management platform designed for e-commerce teams to monitor sales performance, manage operational workflows, analyze customer behavior, and make data-driven business decisions.
+
+SeverMarket Analytics provides a unified business intelligence interface with interactive dashboards, order management, product analytics, customer insights, and regional performance tracking.
+
+Built with **Next.js, React, TypeScript, Redux Toolkit, RTK Query, and Material UI**, the project demonstrates scalable frontend architecture, modern state management, API integration, responsive UI development, and production-oriented engineering practices.
+
 ## SaaS Analytics & Admin Dashboard Platform
 
 SeverMarket Analytics is a modern analytics and management platform for e-commerce operations.
