@@ -36,6 +36,7 @@ SeverMarket Analytics provides a unified dashboard where managers and analysts c
 # Features
 
 ## Dashboard
+![Dashboard](./screenshots/dashboard.png)
 
 Main analytics workspace with:
 
@@ -57,6 +58,7 @@ Implemented KPI cards:
 ---
 
 ## Analytics
+![Analytics](./screenshots/analytics.png)
 
 Advanced analytics section:
 
@@ -72,6 +74,7 @@ Charts are built using Recharts.
 ---
 
 ## Orders Management
+![Orders](./screenshots/orders.png) 
 
 Order management interface includes:
 
