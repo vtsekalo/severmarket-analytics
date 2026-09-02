@@ -369,15 +369,9 @@ Potential improvements:
 
 ---
 
-# Screenshots
-
-_Add application screenshots here._
-
----
-
 # Live Demo
 
-_Add deployment link here._
+(https://severmarket-analytics.vercel.app)
 
 ---
 
